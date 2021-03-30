@@ -6,7 +6,11 @@ from .views import (
                     update,
                     delete,
                     i,
-                    index1
+                    index1,
+                    delete1,
+                    update1,
+                    add1,
+                    dl
                     #index,video_watch_view,liked_video,dislike_video,subscriber_view,video_comment, 
                    )
 
@@ -16,7 +20,12 @@ urlpatterns=[
    path('index', index, name="home"),
    path('accounts/profile/',index,name="home2"),    
    path("add", add, name="edit"),
+   path("add1", add1, name="edit"),
    path("edit/<int:pk>", views.update.as_view(), name="update"),
    path("delete/<int:id>/", delete, name="home3"),
-   path("filter",views.filter,name="j")
+   path("updt/<int:pk>", views.update1.as_view(), name="updt1"),
+   path("delt/<int:id>", delete1, name="home31"),
+   path("dowl/<int:id>", dl, name="home21"),
+   path("filter",views.filter,name="j"),
+   path("filter2",views.filter2,name="j2")
 ]

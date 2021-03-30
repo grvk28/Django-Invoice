@@ -34,6 +34,7 @@ class Items(models.Model):
 #baseline_create_date,cust_payment_terms,invoice_id,isOpen
 class t1(models.Model):
     #user=models.ForeignKey(User,on_delete=models.CASCADE,default=User)
+    id=models.AutoField(primary_key=True)
     business_code=models.CharField(max_length=50)
     cust_number=models.CharField(max_length=50)
     name_customer=models.CharField(max_length=50)
@@ -56,5 +57,8 @@ class t1(models.Model):
 
     def __str__(self):
         return self.name_customer
+
+    def get_absolute_url(self):
+        return reverse('home1')
 
 
