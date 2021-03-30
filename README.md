@@ -1,5 +1,5 @@
 # Django-html webapp
-# Sigin,Signup,Read csv and populate database,update,delete,search,add, download a row of record:
+# Sign in,Sign up,Read csv and populate database,update,delete,search,add, download a row of record:
 read csv and populate database file:views.py
     function: def i(line 14)
 
